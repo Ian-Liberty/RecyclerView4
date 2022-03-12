@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:orientation="vertical"
+    android:background="@color/cardview_dark_background"
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        >
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="설정"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.049"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.023" />
+
+        <LinearLayout
+            android:id="@+id/날짜레이아웃"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@+id/button"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.1">
+
+            <TextView
+                android:id="@+id/년도값"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="2022" />
+
+            <TextView
+                android:id="@+id/년"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="년" />
+
+            <TextView
+                android:id="@+id/월값"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="3" />
+
+            <TextView
+                android:id="@+id/월"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="월" />
+
+            <TextView
+                android:id="@+id/일값"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="11" />
+
+            <TextView
+                android:id="@+id/일"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="일" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/가져오기"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="가져오기"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/날짜레이아웃"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="62dp" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/가져오기"
+            app:layout_constraintVertical_bias="0">
+
+            <TextView
+                android:id="@+id/웜업"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="준비" />
+
+            <TextView
+                android:id="@+id/운동"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="운동" />
+
+            <TextView
+                android:id="@+id/휴식"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="휴식" />
+
+            <TextView
+                android:id="@+id/반복"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="라운드" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="40"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/가져오기">
+
+            <TextView
+                android:id="@+id/준비시간"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="right"
+                android:text="0000" />
+
+            <TextView
+                android:id="@+id/단위"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="s" />
+
+            <TextView
+                android:id="@+id/운동시간"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="right"
+                android:text="0000" />
+
+            <TextView
+                android:id="@+id/단위"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:text="s" />
+
+            <TextView
+                android:id="@+id/휴식시간"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="right"
+                android:text="0000" />
+
+            <TextView
+                android:id="@+id/단위"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:text="s" />
+
+            <TextView
+                android:id="@+id/라운드단위"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="right"
+                android:text="X" />
+
+            <TextView
+                android:id="@+id/라운드"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:text="00" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintVertical_bias="0.1"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/날짜레이아웃"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/총시간_분"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00" />
+
+            <TextView
+                android:id="@+id/분단위"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="분" />
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
